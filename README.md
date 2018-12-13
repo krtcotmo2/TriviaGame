@@ -1,0 +1,2 @@
+# TriviaGame
+It is trivial
