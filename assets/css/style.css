@@ -5,11 +5,19 @@
 	position: relative;
 	border-radius: 30px;
 	background: #ccc;
+	height: 17px;
+	border:1px solid #ccc;
+	background: url(../images/spiderman_sm.jpg) repeat-x;
 }
 .hideBar{
 	position: absolute;
-	height:30px;
-	width:50%;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	height:30px;	
+	height: 15px;
+	right:0px;
+	background: rgb(179, 4, 4);
+	top:0px;
 }
 .container{
 	max-width:930px; 
@@ -17,6 +25,13 @@
 	background: url(../images/spiderman_041.jpg) no-repeat;
 	padding-top: 150px;
 	border:1px solid #0d1e37;
+}
+#btnReplay{
+	margin: 0 auto;
+	background: url(../images/spiderWebButton.png) no-repeat;
+	width: 300px;
+	height: 150px;
+	cursor: pointer;
 }
 .chosen{border:1px solid #aaa;}
 .red{color:red; text-decoration: line-through}

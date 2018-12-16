@@ -1,5 +1,5 @@
 let theGame = {
-    defaultTimer:60,
+    defaultTimer:600,
     timeCnt:0,
     qCountDown: null,
     betweenQTimer: null,
@@ -39,15 +39,14 @@ let theGame = {
     },
     startQCountDown: function(){
         let thisGame = this;
-        //$(`.timeDisplay`).text(`Time remainaing: ${thisGame.timeCnt}`);    
         qCountDown = setInterval(function(){
             thisGame.timeCnt--;
-            //$(`.timeDisplay`).text(`Time remainaing:  ${thisGame.timeCnt}`);
+            $(".hideBar").width($(".timeDisplay").width() - (thisGame.timeCnt/thisGame.defaultTimer)*$(".timeDisplay").width());
             if(thisGame.timeCnt <= 0){                
                 clearInterval(qCountDown);
                 thisGame.evaluateAnswer(null);
             }            
-        },1000)
+        },50)
     },
     stopQCountDown:function(){
         clearTimeout(this.questionTimer);
@@ -79,7 +78,7 @@ let theGame = {
         if(theGame.theQuestions.length > 0){           
             this.startBetweenTimer();
         }else{
-            $("#btnReplay").removeClass("d-none");
+            $("#btnReplay").removeClass("d-none");$(`.feedback`).append(`<div class='d-flex justify-content-around'><div><b>Correct: ${this.numCorrect}</b></div><div><b>Incorrect: ${this.numWrong}</b></div><div><b>Unanswered: ${this.numUnanswered}</b></div></div>`)
         }   
     }
 
