@@ -39,10 +39,10 @@ let theGame = {
     },
     startQCountDown: function(){
         let thisGame = this;
-        $(`.timeDisplay`).text(`Time remainaing: ${thisGame.timeCnt}`);    
+        //$(`.timeDisplay`).text(`Time remainaing: ${thisGame.timeCnt}`);    
         qCountDown = setInterval(function(){
             thisGame.timeCnt--;
-            $(`.timeDisplay`).text(`Time remainaing:  ${thisGame.timeCnt}`);
+            //$(`.timeDisplay`).text(`Time remainaing:  ${thisGame.timeCnt}`);
             if(thisGame.timeCnt <= 0){                
                 clearInterval(qCountDown);
                 thisGame.evaluateAnswer(null);

@@ -1,13 +1,39 @@
 .ans{cursor: none; padding:12px;}
 .ans:hover{background: #aaa;}
 .pointer{cursor: pointer;}
-.container{max-width:930px; margin:36px auto;}
+.timeDisplay{
+	position: relative;
+	border-radius: 30px;
+	background: #ccc;
+}
+.hideBar{
+	position: absolute;
+	height:30px;
+	width:50%;
+}
+.container{
+	max-width:930px; 
+	margin:0px auto;
+	background: url(../images/spiderman_041.jpg) no-repeat;
+	padding-top: 150px;
+	border:1px solid #0d1e37;
+}
 .chosen{border:1px solid #aaa;}
 .red{color:red; text-decoration: line-through}
-button{margin-left:50%}
-@media (max-width: 576px) { 
+button{margin-left:calc(50% - 36px); margin-bottom:24px;}
+@media (max-width: 992px) { 
+	.container{
+		background: url(../images/spiderman_md.jpg) no-repeat;
+	}
+}
+@media (max-width: 768px) { 
 	h3 {
 		font-size:1.25em;
 	}  
+	.container{
+		background: url(../images/spiderman_sm.jpg) no-repeat;
+		padding-top: 112px;
+	}
 }
+
  
