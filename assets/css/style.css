@@ -1,0 +1,13 @@
+.ans{cursor: none; padding:12px;}
+.ans:hover{background: #aaa;}
+.pointer{cursor: pointer;}
+.container{max-width:930px; margin:36px auto;}
+.chosen{border:1px solid #aaa;}
+.red{color:red; text-decoration: line-through}
+button{margin-left:50%}
+@media (max-width: 576px) { 
+	h3 {
+		font-size:1.25em;
+	}  
+}
+ 
