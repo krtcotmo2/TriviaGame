@@ -31,7 +31,9 @@
     <script src="./assets/scripts/trivia.js"></script>
 
     <script type='text/javascript'>
+
         theGame.startGame(allQuestions);
+        
         $("#btnReplay").on("click", function () {
             theGame.startGame(allQuestions);
             $(this).addClass("d-none");
